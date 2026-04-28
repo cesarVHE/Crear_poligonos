@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovisualizador Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <h3>Panel de Geoprocesamiento</h3>
+        
+        <label>Sistema de Referencia (CRS):</label>
+        <select id="crsSelect">
+            <option value="EPSG:4326">WGS 84 (Geográficas)</option>
+            <option value="EPSG:32611">UTM Zona 11N</option>
+            <option value="EPSG:32612">UTM Zona 12N</option>
+            <option value="EPSG:32613">UTM Zona 13N</option>
+            <option value="EPSG:32614">UTM Zona 14N</option>
+            <option value="EPSG:32615">UTM Zona 15N</option>
+            <option value="EPSG:32616">UTM Zona 16N</option>
+        </select>
+
+        <label>Método de Entrada:</label>
+        <select id="inputMethod">
+            <option value="manual">Captura Manual (Tabla)</option>
+            <option value="csv">Importar CSV</option>
+        </select>
+
+        <div id="dynamicContent"></div>
+
+        <div class="button-group">
+            <button id="drawBtn">Dibujar Polígono</button>
+            <button id="clearBtn" class="danger-btn">Limpiar Todo</button>
+        </div>
+        <button id="exportBtn" class="success-btn">Exportar a KML</button>
+    </div>
+    <div id="map"></div>
+    <script src="index.js"></script>
+</body>
+</html>
