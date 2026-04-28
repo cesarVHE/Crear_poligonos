@@ -21,8 +21,8 @@ function updateUI() {
     const container = document.getElementById('dynamicContent');
     
     // Definir etiquetas según el CRS
-    const labelY = (crs === 'EPSG:4326') ? "LATITUD (Y)" : "NORTE (N/Y)";
-    const labelX = (crs === 'EPSG:4326') ? "LONGITUD (X)" : "ESTE (E/X)";
+    const labelY = (crs === 'EPSG:4326') ? "LATITUD (Y)" : "NORTE (Y)";
+    const labelX = (crs === 'EPSG:4326') ? "LONGITUD (X)" : "ESTE (X)";
     const placeholderY = (crs === 'EPSG:4326') ? "20.96" : "2318544";
     const placeholderX = (crs === 'EPSG:4326') ? "-89.62" : "227410";
 
